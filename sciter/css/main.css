@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  image-rendering: optimize-quality;
+}
+
+:disabled {
+  display: none;
+}
+
+html {
+  background: red;
+}
+
+body {
+  background: #6fca1c;
+}
+
+html.transparent,
+html.transparent > body {
+  background: transparent;
+}
+
+html.transparent #controls {
+  display: none;
+}
+
+html {
+  var(closed): url('this://app/png/avatars/bambi/closed.png');
+  var(open): url('this://app/png/avatars/bambi/open.png');
+  var(closed-blink): url('this://app/png/avatars/bambi/closed-blink.png');
+  var(open-blink): url('this://app/png/avatars/bambi/open-blink.png');
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 16dip;
+  position: relative;
+  background-image: url('this://app/png/grid.png');
+  background-size: 70px;
+  background-repeat: repeat;
+}
+
+#controls {
+  //border: 2dip solid blue;
+  width: *;
+  height: *;
+  flow: horizontal;
+  overflow: hidden;
+}
+
+#controls-left {
+  //border: 2dip solid cyan;
+  width: 7%;
+  height: *;
+  flow: vertical;
+  border-spacing: 1%;
+}
+
+#controls-top {
+  //border: 2dip solid cyan;
+  height: 10%;
+  width: min-content;
+  flow: horizontal;
+  border-spacing: 1%;
+  margin-left: *;
+}
+
+#meters {
+  //border: 2dip solid yellow;
+  width: *;
+  height: 50vh;
+  flow: horizontal;
+  border-spacing: *;
+  position: relative;
+  //background: red;;
+}
+
+#meter-microphone {
+  margin-left: 20%;
+}
+
+#meter-delay {
+  margin-right: 20%;
+}
+
+#meter-microphone,
+#meter-delay {
+  var(volume): 0%;
+  height: 45vh;
+  width: 25%;
+  border: 2dip solid black;
+  background: linear-gradient(
+    to top,
+    var(color, red) 0%,
+    var(color, red) var(volume, 50%),
+    white var(volume, 50%),
+    white 100%
+  );
+  background-repeat: no-repeat;
+}
+
+input[type='vslider'] > button.slider {
+  background-size: 100% auto;
+  border-radius: 0;
+  width: 275%;
+  height: 5%;
+  background-color: transparent;
+  background-position: 0 50%;
+  border-width: 0;
+}
+
+button.slider:hover {
+  background: transparent;
+  foreground: transparent;
+}
+
+#meter-microphone > button.slider {
+  background-image: url('this://app/png/controls/meters/left.png');
+}
+
+#meter-delay > button.slider {
+  background-image: url('this://app/png/controls/meters/right.png');
+}
+
+#meter-microphone {
+  var(color): #2ebe38;
+}
+
+#meter-delay {
+  var(color): #453be2;
+}
+
+#slider-left {
+  left: -25%;
+}
+
+#slider-right {
+  right: -25%;
+}
+
+#buttons-left {
+  //border: 2px dashed red;
+  flow: vertical;
+  border-spacing: *;
+  width: *;
+  height: *;
+}
+
+#buttons-top {
+  //border: 2px dashed red;
+  flow: horizontal;
+  border-spacing: 1%;
+  width: max-content;
+  height: *;
+}
+
+button {
+  background: transparent;
+}
+
+#buttons-left button {
+  width: *;
+  height: width(100%);
+  background-color: transparent;
+  background-size: auto 100%;
+  background-position: 50% 50%;
+  border-width: 0;
+  border-radius: 0;
+}
+
+#buttons-top button {
+  width: height(100%);
+  height: *;
+  background-color: transparent;
+  background-size: auto 100%;
+  background-position: 50% 50%;
+  border-width: 0;
+  border-radius: 0;
+}
+
+#buttons-left button:active, #about:active, #close:active {
+  filter: brightness(-10%);
+}
+
+popup[role='tooltip'] {
+  color: white;
+  background: rgba(0, 0, 0, 0.666);
+  border-width: 0;
+  padding: 0.333em;
+  font-size: 1.25em;
+  font-family: Calibri;
+}
+
+#microphone-device {
+  background-image: url('this://app/png/controls/buttons/left/mic.png');
+}
+
+#background-color {
+  background-image: url('this://app/png/controls/buttons/left/bg.png');
+}
+
+#open-file {
+  background-image: url('this://app/png/controls/buttons/left/open.png');
+}
+
+#save-file {
+  background-image: url('this://app/png/controls/buttons/left/save.png');
+}
+
+/* TOP ROW BUTTONS */
+
+button.mouth-image {
+  position: relative;
+}
+
+button.mouth-image.border-default {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/border/default.png');
+}
+
+button.mouth-image.border-add {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/border/add.png');
+}
+
+button.mouth-image:active {
+  filter: brightness(-10%);
+}
+
+button.mouth-image::before {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: height(100%);
+  height: 66%;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+button.mouth-image::after {
+  position: absolute;
+  top: 69%;
+  left: 37%;
+  width: height(100%);
+  height: 35%;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+}
+
+#closed-mouth-image.border-default::before {
+  background-image: var(closed, url('this://app/png/avatars/bambi/closed.png'));
+}
+
+#closed-mouth-image::after {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/closed.png');
+}
+
+#open-mouth-image.border-default::before {
+  background-image: var(open, url('this://app/png/avatars/bambi/open.png'));
+}
+
+#open-mouth-image::after {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/open.png');
+}
+
+#closed-mouth-blinking-image.border-default::before {
+  background-image: var(
+    closed-blink,
+    url('this://app/png/avatars/bambi/closed-blink.png')
+  );
+}
+
+#closed-mouth-blinking-image::after {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/closed-blink.png');
+}
+
+#open-mouth-blinking-image.border-default::before {
+  background-image: var(
+    open-blink,
+    url('this://app/png/avatars/bambi/open-blink.png')
+  );
+}
+
+#open-mouth-blinking-image::after {
+  background-image: url('this://app/png/controls/buttons/top/avatar-change/open-blink.png');
+}
+
+button.motion {
+  background-image: url('this://app/png/controls/buttons/top/motion/border.png');
+  position: relative;
+  var(x): 0dip;
+  var(y): height(33%);
+}
+
+#closed-mouth-motion {
+  var(color): #9bccd4;
+}
+
+#open-mouth-motion {
+  var(color): #e7fd5b;
+}
+
+#mouth-transition {
+  var(foreground): url('this://app/png/controls/buttons/top/motion/closed.png');
+}
+
+#mouth-transition::before {
+  foreground-image: var(foreground, red);
+}
+
+button.motion::before {
+  position: absolute;
+  width: height(100%);
+  height: 90%;
+  foreground-size: 105% 105%;
+  foreground-position: var(x, -999dip) var(y, -999dip);
+  overflow: hidden;
+  z-index: -1;
+  hit-margin: -999px;
+}
+
+#closed-mouth-motion::before {
+  foreground-image: url('this://app/png/controls/buttons/top/motion/closed.png');
+}
+
+#open-mouth-motion::before {
+  foreground-image: url('this://app/png/controls/buttons/top/motion/open.png');
+}
+
+button.motion::after {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: var(color, red);
+  overflow: hidden;
+  z-index: -2;
+  transform: translate(11%, 11%);
+  hit-margin: -999px;
+}
+
+#set-hotkey {
+  background-image: url('this://app/png/controls/buttons/top/hotkey/set/default.png');
+}
+
+#hotkey-mode {
+  background-image: url('this://app/png/controls/buttons/top/hotkey/mode/0.png');
+}
+
+#delete-state {
+  background-image: url('this://app/png/controls/buttons/right/delete.png');
+}
+
+#about {
+  background-image: url('this://app/png/controls/buttons/top/info.png');
+}
+
+#close {
+  background-image: url('this://app/png/controls/buttons/top/close.png');
+}
+
+#avatar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: width(100%);
+}
+
+menu.popup {
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.692);
+}
+

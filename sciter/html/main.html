@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html window-frame="transparent">
+
+  <head>
+    <title>TransTube</title>
+    <link href="this://app/css/main.css" rel="stylesheet">
+    <script src="this://app/js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <img #avatar src="this://app/png/avatars/bambi/closed.png" width="900" height="900" />
+    <div #controls>
+      <div #controls-left>
+        <div #meters>
+          <input |vslider #meter-microphone value="50" min="0" max="100" title="microphone volume sensitivity" />
+          <input |vslider #meter-delay value="95" min="0" max="100" title="microphone delay sensitivity" />
+        </div>
+        <div #buttons-left>
+          <button disabled #microphone-device title="microphone device"></button>
+          <button disabled #background-color title="background color"></button>
+          <button disabled #open-file title="open file"></button>
+          <button disabled #save-file title="save file"></button>
+        </div>
+      </div>
+      <div #controls-top>
+        <div #buttons-top>
+          <button .mouth-image.border-default #closed-mouth-image title="closed mouth image"></button>
+          <button .mouth-image.border-default #open-mouth-image title="open mouth image"></button>
+          <button .mouth-image.border-default #closed-mouth-blinking-image title="closed mouth blinking image"></button>
+          <button .mouth-image.border-default #open-mouth-blinking-image title="open mouth blinking image"></button>
+          <button .motion #closed-mouth-motion title="closed mouth motion" counter="1"></button>
+          <button .motion #open-mouth-motion title="open mouth motion" counter="4"></button>
+          <button disabled .motion #mouth-transition title="mouth transition"></button>
+          <button disabled #set-hotkey title="set hotkey"></button>
+          <button disabled #hotkey-mode title="hotkey mode"></button>
+          <button disabled #delete-state title="delete state"></button>
+          <button #about title="about"></button>
+          <button #close title="exit"></button>
+        </div>
+      </div>
+    </div>
+
+    <menu .popup>
+      <li #change-image>change image</li>
+      <li #remove-image>remove image</li>
+    </menu>
+
+  </body>
+
+</html>

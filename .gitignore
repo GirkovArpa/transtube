@@ -1,0 +1,6 @@
+/target
+/itch
+/ripped
+*.exe
+*.dll
+*.wav
