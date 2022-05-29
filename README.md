@@ -23,6 +23,8 @@ It also switches your avatar depending on whether you're talking into the mic or
 
 It is based on **<a href="https://veado.tube/">veadotube-mini**</a>.  Thanks to <a href="https://assetripper.github.io/AssetRipper/">**AssetRipper**</a>, much of the source code and assets have been recycled.
 
+Also uses code from **[arduino-audio-meter](https://github.com/quorauk/arduino-audio-meter)**.
+
 The default deer avatar is named **Tube**, and was designed by <a href="https://twitter.com/bellaexclames">**bella!**</a>.
 
 ## Dependencies
