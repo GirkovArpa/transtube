@@ -1,6 +1,6 @@
 [package]
 name = "transtube"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["GirkovArpa <girkovarpa@protonmail.com>"]
 edition = "2018"
 
@@ -21,4 +21,4 @@ OriginalFilename = "transtube.exe"
 LegalCopyright = "Copyright © Girkov Arpa 2022"
 FileDescription = "TransTube: Simple vtuber app."
 ProductName = "TransTube"
-ProductVersion = "0.1.0"
+ProductVersion = "0.2.0"

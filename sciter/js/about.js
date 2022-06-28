@@ -13,10 +13,6 @@ $('#veadotube-mini').on('click', () => {
   launch('https://veado.tube/?ref=transtube');
 });
 
-$('#bellaexclames').on('click', () => {
-  launch('https://twitter.com/bellaexclames');
-});
-
 $('#girkov-arpa').on('click', () => {
   launch('https://girkovarpa.itch.io/?ref=transtube');
 });

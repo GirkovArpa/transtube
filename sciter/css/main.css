@@ -25,10 +25,10 @@ html.transparent #controls {
 }
 
 html {
-  var(closed): url('this://app/png/avatars/bambi/closed.png');
-  var(open): url('this://app/png/avatars/bambi/open.png');
-  var(closed-blink): url('this://app/png/avatars/bambi/closed-blink.png');
-  var(open-blink): url('this://app/png/avatars/bambi/open-blink.png');
+  var(closed): url('this://app/png/avatars/crab/closed.png');
+  var(open): url('this://app/png/avatars/crab/open.png');
+  var(closed-blink): url('this://app/png/avatars/crab/closed-blink.png');
+  var(open-blink): url('this://app/png/avatars/crab/open-blink.png');
   overflow: hidden;
 }
 
@@ -247,7 +247,7 @@ button.mouth-image::after {
 }
 
 #closed-mouth-image.border-default::before {
-  background-image: var(closed, url('this://app/png/avatars/bambi/closed.png'));
+  background-image: var(closed, url('this://app/png/avatars/crab/closed.png'));
 }
 
 #closed-mouth-image::after {
@@ -255,7 +255,7 @@ button.mouth-image::after {
 }
 
 #open-mouth-image.border-default::before {
-  background-image: var(open, url('this://app/png/avatars/bambi/open.png'));
+  background-image: var(open, url('this://app/png/avatars/crab/open.png'));
 }
 
 #open-mouth-image::after {
@@ -265,7 +265,7 @@ button.mouth-image::after {
 #closed-mouth-blinking-image.border-default::before {
   background-image: var(
     closed-blink,
-    url('this://app/png/avatars/bambi/closed-blink.png')
+    url('this://app/png/avatars/crab/closed-blink.png')
   );
 }
 
@@ -276,7 +276,7 @@ button.mouth-image::after {
 #open-mouth-blinking-image.border-default::before {
   background-image: var(
     open-blink,
-    url('this://app/png/avatars/bambi/open-blink.png')
+    url('this://app/png/avatars/crab/open-blink.png')
   );
 }
 
