@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: #6fca1c;
+  background: #b3b3b3;
 }
 
 html.transparent,
@@ -214,6 +214,11 @@ button.mouth-image {
   position: relative;
 }
 
+.border-default {
+  position: relative;
+}
+
+
 button.mouth-image.border-default {
   background-image: url('this://app/png/controls/buttons/top/avatar-change/border/default.png');
 }
@@ -233,6 +238,7 @@ button.mouth-image::before {
   width: height(100%);
   height: 66%;
   background-size: 100% 100%;
+  background-color: beige;
   z-index: -1;
 }
 
